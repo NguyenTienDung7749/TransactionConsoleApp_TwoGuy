@@ -11,7 +11,7 @@
                 Console.WriteLine("Hello Bob and Joe I am dzungf and will be the witness to your transaction.");
                 joe.WriteMyInfo();
                 bob.WriteMyInfo();
-                Console.Write("Enter an amount you want to give (or a blank to exit): ");
+                Console.Write("Enter an amount you want to give (or enter to exit): ");
                 string howMuch = Console.ReadLine();
                 if (howMuch == "") return;
                 if (int.TryParse(howMuch, out int amount))
@@ -28,7 +28,7 @@
                     {
                         int cashGiven = joe.GiveCash(amount);
                         bob.ReceiveCash(cashGiven);
-                        Console.WriteLine("Enter to start new transaction");
+                        Console.WriteLine("Press any key and press enter to start new transaction");
                         Console.ReadLine();
                         Console.Clear();
                     }
@@ -36,7 +36,7 @@
                     {
                         int cashGiven = bob.GiveCash(amount);
                         joe.ReceiveCash(cashGiven);
-                        Console.WriteLine("Enter to start new transaction");
+                        Console.WriteLine("Press any key and press enter to start new transaction");
                         Console.ReadLine();
                         Console.Clear();
                     }

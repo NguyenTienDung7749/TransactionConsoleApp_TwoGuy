@@ -37,6 +37,8 @@ namespace PracticeConsoleApp
                 Console.WriteLine($"{Name} says: I don't have enough cash to give you {amount}");
                     return 0;
             }
+            Console.WriteLine("Transaction Completed Successfully");
+            Console.WriteLine($"{Name} says: I have given you {amount} bucks");
             Cash -= amount;
             return amount;
         }
@@ -58,7 +60,6 @@ namespace PracticeConsoleApp
             }
             else
             {
-                Console.WriteLine("Transaction Complete Successfully");
                 Console.WriteLine($"{Name} says: I have received {amount} bucks");
                 Cash += amount;
             }
